@@ -8,6 +8,6 @@ This project includes scripts to monitor Bitcoin transactions using Kafka and We
 
    cd .\Kafka-app\
 
-3. Start the application:
+2. Start the application:
 
    docker-compose up --build
