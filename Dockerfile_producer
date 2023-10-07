@@ -1,0 +1,14 @@
+# Use an official Python runtime as a parent image
+FROM python:3.8
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Copy the producer script into the container
+COPY producer.py .
+
+# Install any dependencies needed for the producer script (if any)
+RUN pip install asyncio websockets kafka-python
+
+# Define the command to run your producer script
+CMD [ "python", "producer.py"]

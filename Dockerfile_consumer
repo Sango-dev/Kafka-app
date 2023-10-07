@@ -1,0 +1,14 @@
+# Use an official Python runtime as a parent image
+FROM python:3.8
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Copy the consumer script into the container
+COPY consumer.py .
+
+# Install any dependencies needed for the consumer script
+RUN pip install asyncio kafka-python
+
+# Define the command to run your consumer script
+CMD [ "python", "consumer.py" ]
